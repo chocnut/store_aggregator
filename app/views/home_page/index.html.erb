@@ -1,1 +1,8 @@
 <p data-role='description'>Search an Item</p>
+
+
+<%= form_for :store, url: searches_path do |form| %>
+  <%= form.label :search %>
+  <%= form.text_field :search %>
+  <%= form.submit 'Search' %>
+<% end %>

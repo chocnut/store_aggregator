@@ -1,8 +1,8 @@
-<p data-role='description'>Search an Item</p>
-
-
-<%= form_for :store, url: searches_path do |form| %>
-  <%= form.label :search %>
-  <%= form.text_field :search %>
-  <%= form.submit 'Search' %>
+<%= form_for :store, url: searches_path, html: { class: 'form-horizontal', role: 'form' } do |form| %>
+  <div class="form-group">
+    <div class="col-sm-10">
+      <%= form.text_field :search, class: 'form-control', placeholder: 'Search Term', required: 'required' %>
+    </div>
+    <%= form.submit 'Search', class: 'btn btn-primary' %>
+  </div>
 <% end %>

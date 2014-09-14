@@ -5,6 +5,6 @@ feature 'Search store for a term' do
     visit root_path
     fill_in 'Search', with: 'iPhone5s'
     click_button 'Search'
-    expect(page).to have_css 'li.item', count: 15
+    expect(page.all('li.item').count).to be > 1
   end
 end

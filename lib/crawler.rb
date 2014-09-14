@@ -3,7 +3,7 @@ require 'capybara/poltergeist'
 
 class Crawler
   include Capybara::DSL
-  Capybara.default_driver = :poltergeist
+  Capybara.current_driver = :poltergeist
   attr_reader :results
 
   STORES = [
@@ -24,6 +24,7 @@ class Crawler
 
   def scrape
     get_items
+    Capybara.use_default_driver
   end
 
   def get_items

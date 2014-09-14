@@ -1,5 +1,6 @@
 require 'capybara'
 require 'capybara/poltergeist'
+require 'uri'
 
 class Crawler
   include Capybara::DSL
@@ -43,7 +44,7 @@ class Crawler
 
     def get_lazada_items(url='')
       unless url.blank?
-        visit url
+        visit URI.encode(url)
       end
       all('.product-card').each do |items|
         name = items.find('.product-card__name').text

@@ -10,4 +10,4 @@ PhantomJS
 
 Sample Search Results
 =============================
-[Imgur](http://i.imgur.com/unvGgp6.png)
+![](http://i.imgur.com/unvGgp6.png)

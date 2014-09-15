@@ -14,6 +14,7 @@ gem 'spring',        group: :development
 gem 'poltergeist'
 gem 'twitter-bootstrap-rails'
 gem 'will_paginate-bootstrap'
+gem 'thin'
 
 group :development, :test do
   gem 'rspec-rails'

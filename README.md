@@ -1,5 +1,9 @@
-store_aggregator
-![Build Status](https://circleci.com/gh/chocnut/store_aggregator.svg?style=shield&circle-token=47a80f46a9de72dda339d47c02440c6db6645dc4)
+Store Aggregator
 ================
 
 simple e-commerce store aggregator that scrapes www.lazada.sg and www.valuebasket.sg
+
+Requirements:
+Rails 4
+Capbyara
+PhantomJS

@@ -1,5 +1,5 @@
 <%= form_for :sort, url: search_path, method: :get do |form| %>
-  <%= form.select :order, [["Sort by", ""], ["Price: High to Low","high"], ["Price: Low to High","low"]], {}, :onChange=>"javascript: this.form.submit();" %>
+  <%= form.select :order, [["Sort by", ""], ["Price: High to Low","high"], ["Price: Low to High","low"]], {selected: @sort} ,:onChange=>"javascript: this.form.submit();"%>
 <% end %>
 
 <%= will_paginate @items, renderer: BootstrapPagination::Rails %>

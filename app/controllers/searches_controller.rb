@@ -13,10 +13,14 @@ class SearchesController < ApplicationController
 
       if params.has_key?(:sort)
         if params[:sort][:order] == 'high'
+          @sort = 'high'
           result_items = result_items.sort_by { |k| k[:price].to_f }.reverse
         elsif params[:sort][:order] == 'low'
+          @sort = 'low'
           result_items = result_items.sort_by { |k| k[:price].to_f }
         end
+      else
+        @sort = ''
       end
 
       @items = WillPaginate::Collection.create(current_page.to_i, per_page, result_items.length) do |pager|

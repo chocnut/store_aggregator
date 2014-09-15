@@ -13,9 +13,9 @@ class SearchesController < ApplicationController
 
       if params.has_key?(:sort)
         if params[:sort][:order] == 'high'
-          result_items = result_items.sort_by {|_key, value| value}
+          result_items = result_items.sort_by { |k| k[:price].to_f }.reverse
         elsif params[:sort][:order] == 'low'
-          result_items = result_items.sort_by {|_key, value| value}.reverse
+          result_items = result_items.sort_by { |k| k[:price].to_f }
         end
       end
 

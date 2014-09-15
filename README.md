@@ -7,3 +7,5 @@ Requirements:
 Rails 4
 Capbyara
 PhantomJS
+
+![Sample Search Results](http://imgur.com/XSZC3IE)

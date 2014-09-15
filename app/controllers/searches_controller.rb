@@ -10,6 +10,15 @@ class SearchesController < ApplicationController
       result_items = StoreSearcher.new("#{params[:id]}").results
       current_page = params[:page] || 1
       per_page = 15
+
+      if params.has_key?(:sort)
+        if params[:sort][:order] == 'high'
+          result_items.first.sort_by {|_key, value| value}
+        elsif params[:sort][:order] == 'low'
+          result_items.sort_by {|_key, value| value}.reverse
+        end
+      end
+
       @items = WillPaginate::Collection.create(current_page.to_i, per_page, result_items.length) do |pager|
         start = (current_page.to_i - 1) * per_page
         pager.replace result_items[start, per_page]

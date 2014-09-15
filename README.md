@@ -8,4 +8,6 @@ Rails 4
 Capbyara
 PhantomJS
 
-![Sample Search Results](http://imgur.com/XSZC3IE)
+Sample Search Results
+=============================
+![](http://i.imgur.com/XSZC3IE.png)
